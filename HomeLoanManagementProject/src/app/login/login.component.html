@@ -1,0 +1,17 @@
+<p>login works!</p>
+<div class="container">
+    <div class="row">
+        <div class="form-group col-md-4">
+            Username : <input type="text" class="form-control" [(ngModel)]="u.username" >
+        </div> 
+    </div>
+    <br>
+    <div class="row">
+        <div class="form-group col-md-4">
+            Password : <input type="text" class="form-control" [(ngModel)]="u.password" >
+        </div> 
+    </div>
+    <br>
+    <button (click)="login(u)">LOGIN</button>
+</div>
+<router-outlet></router-outlet>
