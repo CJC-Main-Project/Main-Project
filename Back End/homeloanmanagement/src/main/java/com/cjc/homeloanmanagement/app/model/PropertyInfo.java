@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ public class PropertyInfo {
 	private String constructionArea;
 	private Double propertyPrice;
 	private Double constructionPrice;
+	@Lob
 	private Byte[] propertyDocuments;
 	@OneToOne(cascade = CascadeType.ALL)
 	private PropertyAddress propertyAddress;
