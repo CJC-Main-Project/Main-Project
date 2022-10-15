@@ -4,6 +4,7 @@ import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.componen
 import { ApplicantDetailsComponent } from './applicant-details/applicant-details.component';
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { RouterModule, Routes } from '@angular/router';
+import { EnquiryDetailsComponent } from './enquiry-details/enquiry-details.component';
 
 const serouting:Routes=[
   {
@@ -14,6 +15,9 @@ const serouting:Routes=[
   },
   {
     path:'view-details',component:ViewDetailsComponent
+  },
+  {
+    path:'enquiry-details',component:EnquiryDetailsComponent
   }
 ]
 
@@ -21,7 +25,8 @@ const serouting:Routes=[
   declarations: [
     EmiCalculatorComponent,
     ApplicantDetailsComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
+    EnquiryDetailsComponent
   ],
   imports: [
     CommonModule,RouterModule.forChild(serouting)

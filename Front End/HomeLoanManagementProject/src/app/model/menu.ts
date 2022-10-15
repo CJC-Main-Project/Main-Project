@@ -5,7 +5,8 @@ export class Menu {
           se: [
             {path: "applicant-details", title: "Applicant Details", icon: "pe-7s-graph", class: "" },
             {path: "emi-calculator", title: "EMI Calculator", icon: "pe-7s-graph", class: "" },
-            {path: "view-details", title: "View Details", icon: "pe-7s-graph", class: "" }
+            {path: "view-details", title: "View Details", icon: "pe-7s-graph", class: "" },
+            {path: "enquiry-details", title: "Enquiry Details", icon: "pe-7s-graph", class: "" }
           ],
           le: [
             {path: "generate-report", title: "Generate Report", icon: "pe-7s-graph", class: "" },
