@@ -25,7 +25,7 @@ public class BankAccountDetails {
 	private Long accountNumber;
 	private String branchName;
 	private String bankName;
-	private Long IFSCcode;
+	private String ifsccode;
 
 
 

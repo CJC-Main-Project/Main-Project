@@ -27,7 +27,7 @@ public class PropertyInfo {
 	private Double propertyPrice;
 	private Double constructionPrice;
 	@Lob
-	private Byte[] propertyDocuments;
+	private byte[] propertyDocuments;
 	@OneToOne(cascade = CascadeType.ALL)
 	private PropertyAddress propertyAddress;
 
