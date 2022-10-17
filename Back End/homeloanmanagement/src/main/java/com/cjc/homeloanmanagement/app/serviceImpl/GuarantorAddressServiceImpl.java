@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cjc.homeloanmanagement.app.model.GuarantorAddress;
+
+import com.cjc.homeloanmanagement.app.model.GuaruntorAddress;
 import com.cjc.homeloanmanagement.app.repositoryI.GuarantorAddressRepositoryI;
 import com.cjc.homeloanmanagement.app.serviceI.GuarantorAddressServiceI;
 
@@ -16,20 +17,20 @@ public class GuarantorAddressServiceImpl implements GuarantorAddressServiceI
 	GuarantorAddressRepositoryI gar;
 
 	@Override
-	public List<GuarantorAddress> getGuarantorAddress() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<GuaruntorAddress> getGuarantorAddress() {
+		
+		return gar.findAll();
 	}
 
 	@Override
-	public void deleteGuarantorAddress(Integer guarantorId) {
-		// TODO Auto-generated method stub
+	public void deleteGuarantorAddress(Integer guaruntorAddressId) {
+		gar.deleteById(guaruntorAddressId);
 		
 	}
 
 	@Override
-	public void save(GuarantorAddress ga) {
-		// TODO Auto-generated method stub
+	public void save(GuaruntorAddress ga) {
+		gar.save(ga);
 		
 	}
 

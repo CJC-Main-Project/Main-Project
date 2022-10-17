@@ -5,6 +5,7 @@ import { ApplicantDetailsComponent } from './applicant-details/applicant-details
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { RouterModule, Routes } from '@angular/router';
 import { EnquiryDetailsComponent } from './enquiry-details/enquiry-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const serouting:Routes=[
   {
@@ -29,7 +30,7 @@ const serouting:Routes=[
     EnquiryDetailsComponent
   ],
   imports: [
-    CommonModule,RouterModule.forChild(serouting)
+    CommonModule,RouterModule.forChild(serouting),ReactiveFormsModule,FormsModule
   ]
 })
 export class SalesExecutiveModule { }

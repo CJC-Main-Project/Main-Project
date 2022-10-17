@@ -17,7 +17,7 @@ public class CustomerAddress {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer permanantAddressId;
+	private Integer customerAddressId;
 	private String areaName;
 	private String cityName;
 	private String district;

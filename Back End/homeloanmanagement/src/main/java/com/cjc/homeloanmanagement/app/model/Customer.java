@@ -50,7 +50,8 @@ public class Customer {
 	private SanctionLetter sanctionletter;
 	@OneToOne(cascade = CascadeType.ALL)
 	private CustomerVerification customerverification;
-
+    @OneToOne(cascade = CascadeType.ALL)
+	private DependentInfo dependentInfo;
 
 
 

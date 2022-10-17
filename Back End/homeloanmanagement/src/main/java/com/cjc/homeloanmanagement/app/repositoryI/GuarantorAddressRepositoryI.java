@@ -1,10 +1,13 @@
 package com.cjc.homeloanmanagement.app.repositoryI;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.cjc.homeloanmanagement.app.model.GuarantorAddress;
+import com.cjc.homeloanmanagement.app.model.GuaruntorAddress;
 
-public interface GuarantorAddressRepositoryI extends JpaRepository<GuarantorAddress, Integer>
+
+@Repository
+public interface GuarantorAddressRepositoryI extends JpaRepository<GuaruntorAddress, Integer>
 {
 
 }

@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import com.cjc.homeloanmanagement.app.model.GuarantorAddress;
+
+import com.cjc.homeloanmanagement.app.model.GuaruntorAddress;
 import com.cjc.homeloanmanagement.app.serviceI.GuarantorAddressServiceI;
 
 @CrossOrigin("*")
@@ -26,7 +27,7 @@ public class GuarantorAddressController
 	GuarantorAddressServiceI gas;
 	
 	@PostMapping("/saveGuarantorAddress")
-	public String saveGuarantorAddress(@RequestBody GuarantorAddress ga) 
+	public String saveGuarantorAddress(@RequestBody GuaruntorAddress ga) 
 	{
 		gas.save(ga);
 		
@@ -35,24 +36,24 @@ public class GuarantorAddressController
 	}
 
 	@GetMapping("/getGuarantorAddress")
-	public List<GuarantorAddress> getGuarantorAddress()
+	public List<GuaruntorAddress> getGuarantorAddress()
 	{
-		List<GuarantorAddress>list=gas.getGuarantorAddress();
+		List<GuaruntorAddress>list=gas.getGuarantorAddress();
 		
 		return list;
 	}
 
-	@PutMapping("/updateGuarantorAddress/{guarantorId}")
-	public String updateGuarantorAddress(@RequestBody GuarantorAddress ga )
+	@PutMapping("/updateGuarantorAddress/{guaruntorAddressId}")
+	public String updateGuarantorAddress(@RequestBody GuaruntorAddress ga )
 	{
 		gas.save(ga);
 		return "Guarantor Address Updated Sucessfully.....!";
 	}
 
-	@DeleteMapping("/deleteGuarantorAddress/{guarantorId}")
-	public String deleteGuarantorAddress(@PathVariable Integer guarantorId )
+	@DeleteMapping("/deleteGuarantorAddress/{guaruntorAddressId}")
+	public String deleteGuarantorAddress(@PathVariable Integer guaruntorAddressId )
 	{
-		gas.deleteGuarantorAddress(guarantorId);
+		gas.deleteGuarantorAddress(guaruntorAddressId);
 		
 		return "Guarantor Address Delete Sucessfully.....!";
 	}

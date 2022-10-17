@@ -7,7 +7,7 @@ accountStatus:string;
 accountNumber:number;
 branchName:string;
 bankName:string;
-IFSCcode:number;
+ifsccode:number;
 
     
 }

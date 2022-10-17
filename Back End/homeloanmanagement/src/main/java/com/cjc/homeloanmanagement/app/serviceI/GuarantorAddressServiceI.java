@@ -2,14 +2,15 @@ package com.cjc.homeloanmanagement.app.serviceI;
 
 import java.util.List;
 
-import com.cjc.homeloanmanagement.app.model.GuarantorAddress;
+
+import com.cjc.homeloanmanagement.app.model.GuaruntorAddress;
 
 public interface GuarantorAddressServiceI {
 
-	List<GuarantorAddress> getGuarantorAddress();
+	List<GuaruntorAddress> getGuarantorAddress();
 
-	void deleteGuarantorAddress(Integer guarantorId);
+	void deleteGuarantorAddress(Integer guaruntorAddressId);
 
-	void save(GuarantorAddress ga);
+	void save(GuaruntorAddress ga);
 
 }

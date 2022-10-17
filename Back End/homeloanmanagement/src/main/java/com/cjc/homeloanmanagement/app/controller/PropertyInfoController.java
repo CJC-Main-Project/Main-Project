@@ -57,6 +57,7 @@ public class PropertyInfoController {
 		 ObjectMapper om=new ObjectMapper();
 		 PropertyInfo pi = om.readValue(doc,PropertyInfo.class);
 		 PropertyInfo propertyInfo=new PropertyInfo();
+		 propertyInfo.setPropertyId(pi.getPropertyId());
 		 propertyInfo.setPropertyType(pi.getPropertyType());
 		 propertyInfo.setPropertyTotalArea(pi.getPropertyTotalArea());
 		 propertyInfo.setConstructionArea(pi.getConstructionArea());

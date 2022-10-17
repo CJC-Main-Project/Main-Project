@@ -1,6 +1,7 @@
 import { BankAccountDetails } from "./bank-account-details";
 import { CustomerAddress } from "./customer-address";
 import { CustomerVerification } from "./customer-verification";
+import { DependentInfo } from "./dependent-info";
 import { GuarantorDetails } from "./guarantor-details";
 import { LoanDisbursement } from "./loan-disbursement";
 import { MortgageDetails } from "./mortgage-details";
@@ -27,6 +28,6 @@ propertyinfo:PropertyInfo;
 loandisbursement:LoanDisbursement;
 sanctionletter: SanctionLetter;
 customerverification:CustomerVerification;
-
+dependentInfo:DependentInfo;
 
 }

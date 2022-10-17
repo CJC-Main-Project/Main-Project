@@ -1,4 +1,330 @@
 
 <div class="main-content">
-    <p>applicant-details works!</p>
+    <form [formGroup]="customerForm" class="container" (ngSubmit)="saveCustomer()">
+        <div *ngIf="pstate==1">
+            <p style="text-align: center;"><i><b>Customer Personal Information</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    Full Name :- &nbsp; <input type="text" class="form-control" formControlName="customerName">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                   Date Of Birth :- &nbsp; <input type="date" class="form-control" formControlName="customerDateOfBirth">
+                </div>&nbsp;
+                <div class="form-group col-md-3">
+                    Gender :- &nbsp; <input type="text" class="form-control" formControlName="customerGender">
+                </div>&nbsp;
+                <div class="form-group col-md-2">
+                    Age :- &nbsp; <input type="text" class="form-control" formControlName="customerAge">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Mobile No :- &nbsp; <input type="text" class="form-control" formControlName="customerMobileNumber">
+                </div>
+                <div class="form-group col-md-4">
+                    Additional Mobile No :- &nbsp; <input type="text" class="form-control" formControlName="customerAdditionalMobileNumber">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                   Email :- &nbsp; <input type="text" class="form-control" formControlName="customerEmail">
+                </div>
+                <div class="form-group col-md-4">
+                   Total Loan Required :- &nbsp; <input type="text" class="form-control" formControlName="customerTotalLoanRequired">
+                </div>
+            </div>
+            <div formGroupName="customerAddress">
+            <p style="text-align: center;"><i><b> Customer Address</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Street Name :- &nbsp; <input type="text" class="form-control" formControlName="streetName">
+                </div>
+                <div class="form-group col-md-3">
+                    Area Name :- &nbsp; <input type="text" class="form-control" formControlName="areaName">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                    City Name :- &nbsp; <input type="text" class="form-control" formControlName="cityName">
+                </div>
+                <div class="form-group col-md-3">
+                    House Number :- &nbsp; <input type="text" class="form-control" formControlName="houseNumber">
+                </div>
+                <div class="form-group col-md-2">
+                    Pincode :- &nbsp; <input type="text" class="form-control" formControlName="pincode">
+                </div>
+            </div>     
+            <div class="row">
+                <div class="form-group col-md-3">
+                    District :- &nbsp; <input type="text" class="form-control" formControlName="district">
+                </div>
+                <div class="form-group col-md-3">
+                    State :- &nbsp; <input type="text" class="form-control" formControlName="state">
+                </div>
+                <div class="form-group col-md-2">
+                    Country :- &nbsp; <input type="text" class="form-control" formControlName="country">
+                </div>
+            </div>
+             </div>   
+            &nbsp;<button (click)="nextDiv()">Next</button>
+        </div>
+        <div *ngIf="pstate==2">
+            <div formGroupName="mortgageDetails">
+            <p style="text-align: center;"><i><b>Mortgage Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-3">
+                   Property Type :- &nbsp; <input type="text" class="form-control" formControlName="mortgagePropertyType">
+                </div>
+                <div class="form-group col-md-3">
+                    Property value :- &nbsp; <input type="text" class="form-control" formControlName="mortgagePropertyValue">
+                </div>
+                <div class="form-group col-md-3">
+                    Loan On Property :- &nbsp; <input type="text" class="form-control" formControlName="mortgageLoanOnProperty">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Property Proof :- &nbsp; <input type="file" class="form-control" (change)="propertyProof($event)">
+                </div>
+                <div class="form-group col-md-4">
+                    Property Insurance :- &nbsp; <input type="file" class="form-control" (change)="propertyInsurance($event)">
+                </div>
+            </div>
+            </div> 
+            <div formGroupName="profession">
+            <p style="text-align: center;"><i><b>Profession Details</b></i></p>  
+            <div class="row">
+                <div class="form-group col-md-3">
+                    Profession Type :- &nbsp; <input type="text" class="form-control" formControlName="professionType">
+                </div>
+                <div class="form-group col-md-3">
+                    Profession Working Type :- &nbsp; <input type="text" class="form-control" formControlName="professionWorkingPeriod">
+                </div>
+                <div class="form-group col-md-3">
+                    Profession Yearly Income :- &nbsp; <input type="text" class="form-control" formControlName="professionYearlyIncome">
+                </div>
+            </div> 
+            </div> 
+            <div formGroupName=" dependentInfo">
+            <p style="text-align: center;"><i><b>Dependent Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-3">
+                   Father Name :- &nbsp; <input type="text" class="form-control" formControlName="fatherName">
+                </div>
+                <div class="form-group col-md-3">
+                    Mother Name :- &nbsp; <input type="text" class="form-control" formControlName="motherName">
+                </div>
+                <div class="form-group col-md-3">
+                    Spouse Name :- &nbsp; <input type="text" class="form-control" formControlName="spouseName">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                   No Of Family Member :- &nbsp; <input type="text" class="form-control" formControlName="noOfFamilyMember">
+                </div>
+                <div class="form-group col-md-3">
+                   Family Income :- &nbsp; <input type="text" class="form-control" formControlName="familyIncome">
+                </div>
+                <div class="form-group col-md-3">
+                   Marital Status :- &nbsp; <input type="text" class="form-control" formControlName="maritalStatus">
+                </div>
+            </div>
+            </div> 
+            &nbsp;<button (click)="backDiv()">Back</button>
+            &nbsp;<button (click)="nextDiv()">Next</button>  
+        </div>
+        <div *ngIf="pstate==3">
+            <div formGroupName=" propertyinfo">
+            <p style="text-align: center;"><i><b>Property Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Property Type :- &nbsp; <input type="text" class="form-control" formControlName="propertyType">
+                </div>
+                <div class="form-group col-md-4">
+                    Property Document :- &nbsp; <input type="file" class="form-control" (change)="propertyDocument($event)">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Property Total Area :- &nbsp; <input type="text" class="form-control" formControlName="propertyTotalArea">
+                </div>
+                <div class="form-group col-md-4">
+                    Property Construction Area  :- &nbsp; <input type="text" class="form-control" formControlName="constructionArea">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Property Price :- &nbsp; <input type="text" class="form-control" formControlName="propertyPrice">
+                </div>
+                <div class="form-group col-md-4">
+                    Consttruction Price  :- &nbsp; <input type="text" class="form-control" formControlName="constructionPrice">
+                </div>
+            </div>
+         
+            <div formGroupName="propertyAddress">
+            <p style="text-align: center;"><i><b> Property Address</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Street Name :- &nbsp; <input type="text" class="form-control" formControlName="streetName">
+                </div>
+                <div class="form-group col-md-3">
+                    Area Name :- &nbsp; <input type="text" class="form-control" formControlName="areaName">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                    City Name :- &nbsp; <input type="text" class="form-control" formControlName="cityName">
+                </div>
+                <div class="form-group col-md-3">
+                    House Number :- &nbsp; <input type="text" class="form-control" formControlName="houseNumber">
+                </div>
+                <div class="form-group col-md-2">
+                    Pincode :- &nbsp; <input type="text" class="form-control" formControlName="pincode">
+                </div>
+            </div>     
+            <div class="row">
+                <div class="form-group col-md-3">
+                    District :- &nbsp; <input type="text" class="form-control" formControlName="district">
+                </div>
+                <div class="form-group col-md-3">
+                    State :- &nbsp; <input type="text" class="form-control" formControlName="state">
+                </div>
+                <div class="form-group col-md-2">
+                    Country :- &nbsp; <input type="text" class="form-control" formControlName="country">
+                </div>
+            </div>
+            </div>
+            </div>
+            &nbsp;<button (click)="backDiv()">Back</button>
+            &nbsp;<button (click)="nextDiv()">Next</button>     
+        </div> 
+        <div *ngIf="pstate==4">
+            <div formGroupName="gurantordetails">
+            <p style="text-align: center;"><i><b>Guarantor Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Full Name :- &nbsp; <input type="text" class="form-control" formControlName="guarantorName">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Pancard No. :- &nbsp; <input type="text" class="form-control" formControlName="guarantorPancardNo">
+                </div>
+                <div class="form-group col-md-4">
+                    Adharcard No.  :- &nbsp; <input type="text" class="form-control" formControlName="guarantorAdharCardNo">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                   Mobile No. :- &nbsp; <input type="text" class="form-control" formControlName="guarantorMobileNo">
+                </div>
+                <div class="form-group col-md-4">
+                    Yearly Income  :- &nbsp; <input type="text" class="form-control" formControlName="guarantorYearlyIncome">
+                </div>
+            </div> 
+            <div formGroupName="guarantorAddress">
+            <p style="text-align: center;"><i><b> Guarantor Address</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Street Name :- &nbsp; <input type="text" class="form-control" formControlName="streetName">
+                </div>
+                <div class="form-group col-md-3">
+                    Area Name :- &nbsp; <input type="text" class="form-control" formControlName="areaName">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                    City Name :- &nbsp; <input type="text" class="form-control" formControlName="cityName">
+                </div>
+                <div class="form-group col-md-3">
+                    House Number :- &nbsp; <input type="text" class="form-control" formControlName="houseNumber">
+                </div>
+                <div class="form-group col-md-2">
+                    Pincode :- &nbsp; <input type="text" class="form-control" formControlName="pincode">
+                </div>
+            </div>     
+            <div class="row">
+                <div class="form-group col-md-3">
+                    District :- &nbsp; <input type="text" class="form-control" formControlName="district">
+                </div>
+                <div class="form-group col-md-3">
+                    State :- &nbsp; <input type="text" class="form-control" formControlName="state">
+                </div>
+                <div class="form-group col-md-2">
+                    Country :- &nbsp; <input type="text" class="form-control" formControlName="country">
+                </div>
+            </div>
+            </div>
+            </div>
+            &nbsp;<button (click)="backDiv()">Back</button>
+            &nbsp;<button (click)="nextDiv()">Next</button>     
+        </div>  
+        <div *ngIf="pstate==5">
+            <div formGroupName="bankAccountDetails">
+            <p style="text-align: center;"><i><b>Bank Account Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Account Holder Name :- &nbsp; <input type="text" class="form-control" formControlName="accountHolderName">
+                </div>
+                <div class="form-group col-md-4">
+                    Account Type  :- &nbsp; <input type="text" class="form-control" formControlName="accounType">
+                </div>
+            </div> 
+             <div class="row">
+                <div class="form-group col-md-4">
+                    Bank Name :- &nbsp; <input type="text" class="form-control" formControlName="bankName">
+                </div>
+                <div class="form-group col-md-4">
+                    Branch Name  :- &nbsp; <input type="text" class="form-control" formControlName="branchName">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Account Status :- &nbsp; <input type="text" class="form-control" formControlName="accountStatus">
+                </div>
+                <div class="form-group col-md-4">
+                    Account Balance  :- &nbsp; <input type="text" class="form-control" formControlName="accountBalance">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Account No. :- &nbsp; <input type="text" class="form-control" formControlName="accountNumber">
+                </div>
+                <div class="form-group col-md-4">
+                    IFSC Code  :- &nbsp; <input type="text" class="form-control" formControlName="ifsccode">
+                </div>
+            </div> 
+            </div>
+            <!-- <div formGroupName=""></div> -->
+            <p style="text-align: center;"><i><b>All Personal Document</b></i></p> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Photp :- &nbsp; <input type="file" class="form-control" (change)="photo($event)">
+                </div>
+                <div class="form-group col-md-4">
+                    Signiture  :- &nbsp; <input type="file" class="form-control" (change)="signiture($event)">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Adharcard :- &nbsp; <input type="file" class="form-control" (change)="adharcard($event)">
+                </div>
+                <div class="form-group col-md-4">
+                    Pancard  :- &nbsp; <input type="file" class="form-control" (change)="pancard($event)">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Bank Cheque :- &nbsp; <input type="file" class="form-control" (change)="bankCheque($event)">
+                </div>
+                <div class="form-group col-md-4">
+                    Bank Statement  :- &nbsp; <input type="file" class="form-control" (change)="bankStatement($event)">
+                </div>
+            </div> 
+            &nbsp;<button (click)="backDiv()">Back</button>
+            &nbsp;<button type="submit">Save</button>
+        </div>  
+    </form>
 </div>
