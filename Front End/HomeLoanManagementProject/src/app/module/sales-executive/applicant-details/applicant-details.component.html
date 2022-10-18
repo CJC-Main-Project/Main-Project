@@ -107,6 +107,20 @@
                 </div>
             </div> 
             </div> 
+            <div formGroupName="customerverification">
+                <p style="text-align: center;"><i><b>Verification Details</b></i></p>  
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        Verification Date :- &nbsp; <input type="date" class="form-control" formControlName="verificationDate">
+                    </div>
+                    <div class="form-group col-md-3">
+                        Status :- &nbsp; <input type="text" class="form-control" formControlName="status">
+                    </div>
+                    <div class="form-group col-md-3">
+                        Remarks :- &nbsp; <input type="text" class="form-control" formControlName="remarks">
+                    </div>
+                </div> 
+                </div> 
             <div formGroupName=" dependentInfo">
             <p style="text-align: center;"><i><b>Dependent Details</b></i></p>
             <div class="row">
@@ -201,7 +215,7 @@
             &nbsp;<button (click)="nextDiv()">Next</button>     
         </div> 
         <div *ngIf="pstate==4">
-            <div formGroupName="gurantordetails">
+            <div formGroupName="guarantordetails">
             <p style="text-align: center;"><i><b>Guarantor Details</b></i></p>
             <div class="row">
                 <div class="form-group col-md-5">

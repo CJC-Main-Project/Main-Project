@@ -1,17 +1,27 @@
-<p>login works!</p>
-<div class="container">
-    <div class="row">
-        <div class="form-group col-md-4">
-            Username : <input type="text" class="form-control" [(ngModel)]="u.username" >
-        </div> 
-    </div>
-    <br>
-    <div class="row">
-        <div class="form-group col-md-4">
-            Password : <input type="text" class="form-control" [(ngModel)]="u.password" >
-        </div> 
-    </div>
-    <br>
-    <button (click)="login(u)">LOGIN</button>
-</div>
+
+<body>
+    <fieldset>
+    <h2 style="text-align:center">Login Form</h2>  
+    
+    <form>
+        
+      <div style="text-align:center">
+        <label for="uname"><b>Username :-</b></label>
+        &nbsp; <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="u.username" required> <br>
+    
+        <label for="psw"><b>Password :-</b></label>
+        &nbsp; <input type="password" placeholder="Enter Password" name="psw"  [(ngModel)]="u.password" required> <br>
+            
+        <button  (click)="login(u)">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+      <br>
+       <!--<div class="container" style="background-color:white">
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div> -->
+    </form>
+    </fieldset>
+ </body>
 <router-outlet></router-outlet>

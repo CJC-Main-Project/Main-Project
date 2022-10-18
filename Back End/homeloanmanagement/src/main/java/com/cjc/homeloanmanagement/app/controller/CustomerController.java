@@ -50,11 +50,11 @@ public class CustomerController {
 	{
 		ObjectMapper om=new ObjectMapper();
 		
-        MortgageDetails md=om.readValue(information, MortgageDetails.class);
+        Customer md=om.readValue(information, Customer.class);
 		MortgageDetails mortgage=new MortgageDetails();
-		mortgage.setMortgageLoanOnProperty(md.getMortgageLoanOnProperty());
-		mortgage.setMortgagePropertyType(md.getMortgagePropertyType());
-		mortgage.setMortgagePropertyValue(md.getMortgagePropertyValue());
+		mortgage.setMortgageLoanOnProperty(md.getMortgageDetails().getMortgageLoanOnProperty());
+		mortgage.setMortgagePropertyType(md.getMortgageDetails().getMortgagePropertyType());
+		mortgage.setMortgagePropertyValue(md.getMortgageDetails().getMortgagePropertyValue());
 		mortgage.setMortgagePropertyInsurance(mortgagePropertyInsurance.getBytes());
 		mortgage.setMortgagePropertyProof(mortgagePropertyProof.getBytes());
 		
@@ -66,51 +66,51 @@ public class CustomerController {
 		docs.setPhoto(photo.getBytes());
 		docs.setSignature(signature.getBytes());
 		
-		PropertyAddress pa=om.readValue(information,PropertyAddress.class);
+		//PropertyAddress pa=om.readValue(information,PropertyAddress.class);
 		
-		PropertyInfo pi = om.readValue(information,PropertyInfo.class);
+		//PropertyInfo pi = om.readValue(information,PropertyInfo.class);
 		 PropertyInfo propertyInfo=new PropertyInfo();
-		 propertyInfo.setPropertyType(pi.getPropertyType());
-		 propertyInfo.setPropertyTotalArea(pi.getPropertyTotalArea());
-		 propertyInfo.setConstructionArea(pi.getConstructionArea());
-		 propertyInfo.setPropertyPrice(pi.getPropertyPrice());
-		 propertyInfo.setConstructionPrice(pi.getConstructionPrice());
+		 propertyInfo.setPropertyType(md.getPropertyinfo().getPropertyType());
+		 propertyInfo.setPropertyTotalArea(md.getPropertyinfo().getPropertyTotalArea());
+		 propertyInfo.setConstructionArea(md.getPropertyinfo().getConstructionArea());
+		 propertyInfo.setPropertyPrice(md.getPropertyinfo().getPropertyPrice());
+		 propertyInfo.setConstructionPrice(md.getPropertyinfo().getConstructionPrice());
 		 propertyInfo.setPropertyDocuments(propertyDocuments.getBytes());
-		 propertyInfo.setPropertyAddress(pa);
+		 propertyInfo.setPropertyAddress(md.getPropertyinfo().getPropertyAddress());
 		 
-		 GuaruntorAddress ga=om.readValue(information,GuaruntorAddress.class);
-		 GuarantorDetails gd=om.readValue(information,GuarantorDetails.class);
-		 gd.setGuarantorAddress(ga);
+		// GuaruntorAddress ga=om.readValue(information,GuaruntorAddress.class);
+		// GuarantorDetails gd=om.readValue(information,GuarantorDetails.class);
+		// gd.setGuarantorAddress(ga);
 		 
-		 BankAccountDetails ba=om.readValue(information,BankAccountDetails.class);
-		 DependentInfo di=om.readValue(information,DependentInfo.class);
-		 Profession p=om.readValue(information,Profession.class);
-		 CustomerVerification cv=om.readValue(information,CustomerVerification.class);
-		 LoanDisbursement  ld=om.readValue(information,LoanDisbursement.class);
-		 SanctionLetter sl=om.readValue(information,SanctionLetter.class);
-		 CustomerAddress ca=om.readValue(information,CustomerAddress.class);
+		// BankAccountDetails ba=om.readValue(information,BankAccountDetails.class);
+		// DependentInfo di=om.readValue(information,DependentInfo.class);
+		// Profession p=om.readValue(information,Profession.class);
+		// CustomerVerification cv=om.readValue(information,CustomerVerification.class);
+		// LoanDisbursement  ld=om.readValue(information,LoanDisbursement.class);
+		 //SanctionLetter sl=om.readValue(information,SanctionLetter.class);
+		// CustomerAddress ca=om.readValue(information,CustomerAddress.class);
 		 
-		 Customer c=om.readValue(information,Customer.class);
+		// Customer c=om.readValue(information,Customer.class);
 		Customer co=new Customer();
 		co.setAllpersonaldocs(docs);
 		co.setMortgageDetails(mortgage);
 		co.setPropertyinfo(propertyInfo);
-		co.setBankAccountDetails(ba);
-		co.setCustomerverification(cv);
-		co.setDependentInfo(di);
-		co.setGuarantordetails(gd);
-		co.setLoandisbursement(ld);
-		co.setProfession(p);
-		co.setSanctionletter(sl);
-		co.setCustomerAdditionalMobileNumber(c.getCustomerAdditionalMobileNumber());
-		co.setCustomerAge(c.getCustomerAge());
-		co.setCustomerDateOfBirth(c.getCustomerDateOfBirth());
-		co.setCustomerEmail(c.getCustomerEmail());
-		co.setCustomerGender(c.getCustomerGender());
-		co.setCustomerMobileNumber(c.getCustomerMobileNumber());
-		co.setCustomerName(c.getCustomerName());
-		co.setCustomerTotalLoanRequired(c.getCustomerTotalLoanRequired());
-		
+		co.setBankAccountDetails(md.getBankAccountDetails());
+		co.setCustomerverification(md.getCustomerverification());
+		co.setDependentInfo(md.getDependentInfo());
+		co.setGuarantordetails(md.getGuarantordetails());
+		co.setLoandisbursement(md.getLoandisbursement());
+		co.setProfession(md.getProfession());
+		co.setSanctionletter(md.getSanctionletter());
+		co.setCustomerAdditionalMobileNumber(md.getCustomerAdditionalMobileNumber());
+		co.setCustomerAge(md.getCustomerAge());
+		co.setCustomerDateOfBirth(md.getCustomerDateOfBirth());
+		co.setCustomerEmail(md.getCustomerEmail());
+		co.setCustomerGender(md.getCustomerGender());
+		co.setCustomerMobileNumber(md.getCustomerMobileNumber());
+		co.setCustomerName(md.getCustomerName());
+		co.setCustomerTotalLoanRequired(md.getCustomerTotalLoanRequired());
+		co.setCustomerAddress(md.getCustomerAddress());
 		cs.savaCustomer(co);
 		return "Customer Save Successfully...";
 	}

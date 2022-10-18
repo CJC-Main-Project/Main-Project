@@ -24,7 +24,7 @@ mortgageDetails:MortgageDetails;
 profession:Profession;
 bankAccountDetails:BankAccountDetails;
 propertyinfo:PropertyInfo;
- gurantordetails:GuarantorDetails;
+guarantordetails:GuarantorDetails;
 loandisbursement:LoanDisbursement;
 sanctionletter: SanctionLetter;
 customerverification:CustomerVerification;

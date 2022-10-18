@@ -10,7 +10,11 @@ export class CustomerService {
   constructor(private http:HttpClient) { }
 
 
-  postCustomer(customer){
+  postCustomer(customer:any){
    return this.http.post(this.url+"/saveCustomer",customer);
+  }
+
+  getCustomer(){
+    return this.http.get(this.url+"/getCustomer");
   }
 }

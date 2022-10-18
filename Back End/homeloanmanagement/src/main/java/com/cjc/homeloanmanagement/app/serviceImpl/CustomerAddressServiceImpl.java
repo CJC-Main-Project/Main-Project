@@ -17,7 +17,7 @@ public class CustomerAddressServiceImpl implements CustomerAddressServiceI
 
 @Override
 public void save(CustomerAddress ca) {
-	// TODO Auto-generated method stub
+	car.save(ca);
 	
 }
 

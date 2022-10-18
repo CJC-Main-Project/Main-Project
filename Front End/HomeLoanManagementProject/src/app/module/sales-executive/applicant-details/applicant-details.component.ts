@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { CustomerAddress } from 'app/model/customer-address';
+
 import { CustomerService } from 'app/shared/customer.service';
 
 @Component({
@@ -69,7 +69,7 @@ export class ApplicantDetailsComponent implements OnInit {
           streetName:[''],
         }),
       }),
-      gurantordetails:this.fb.group({
+      guarantordetails:this.fb.group({
         guarantorName:[''],
         guarantorPancardNo:[''],
         guarantorMobileNo:[''],
@@ -91,14 +91,18 @@ export class ApplicantDetailsComponent implements OnInit {
         totalAmount:[''],
         bankName:[''],
         accountNumber:[''],
-        IFSCCode:[''],
+        ifscCode:[''],
         accountType:[''],
         transferAmount:[''],
         paymentStatus:[''],
         amountPaidDate:[''],
       }),
       sanctionletter: this.fb.group({}),
-      customerverification:this.fb.group({}),
+      customerverification:this.fb.group({
+        verificationDate:[''],
+        status:[''],
+        remarks:['']
+      }),
       dependentInfo:this.fb.group({
         fatherName:[''],
         motherName:[''],

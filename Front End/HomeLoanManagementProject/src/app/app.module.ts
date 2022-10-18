@@ -27,6 +27,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     FooterModule,
     SidebarModule,
     AppRoutingModule
+  
   ],
   declarations: [
     AppComponent,

@@ -5,7 +5,7 @@ amountPayType:string;
 totalAmount:number;
 bankName:string;
 accountNumber:number;
-IFSCCode:string;
+ifscCode:string;
 accountType:string;
 transferAmount:number;
 paymentStatus:string;

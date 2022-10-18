@@ -12,4 +12,21 @@ export class EmiCalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  loan={
+    propertyValue :null,
+  loanRequired :null,
+  loanAmount:null,
+  msg: null
+
+}
+
+calculate(){
+this.loan.loanAmount=(this.loan.propertyValue*60)/100;
+if(this.loan.loanAmount>=this.loan.loanRequired){                    
+  this.loan.msg="Loan Amount Approved";
+}
+else{
+  this.loan.msg="Loan Amount Rejected because property value is less";
+}
+}
 }

@@ -1,4 +1,32 @@
 
 <div class="main-content">
-    <p>emi-calculator works!</p>
+    <div class="main-content">
+        <p>emi-calculator works!</p>
+        <div>
+            
+            <p style="text-align: center;"><i><b>Loan Estimation Calculator</b></i></p>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        Property Value :- &nbsp; <input type="text" class="form-control" [(ngModel)]="loan.propertyValue">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        Loan Required :- &nbsp; <input type="text" class="form-control" [(ngModel)]="loan.loanRequired">
+                    </div>
+                </div>
+                <button (click)="calculate()">Calculate</button>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        Loan Amount :- 
+                    </div>
+               
+                    <div class="form-group col-md-4">
+                        {{loan.msg}} &nbsp;
+                        {{loan.loanAmount}}
+                    </div>
+                </div>
+        </div>
+    </div>
+    
 </div>
