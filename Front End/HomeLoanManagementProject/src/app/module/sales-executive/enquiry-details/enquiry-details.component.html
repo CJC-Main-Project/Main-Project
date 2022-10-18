@@ -1,4 +1,88 @@
 
 <div class="main-content">
-    <p>enquiry-details works!</p>
+    <form  [formGroup]="edform" class="container">
+        <div *ngIf="pstate==1">
+
+        <h3 style="color:maroon;" style="text-align:center">Enquiery Details</h3>
+        <div class="row">
+         <div class="form-group col-md-6" style="color:indigo">
+           Full Name: <input type="text"  class="form-control" formControlName="fullname">
+      </div>
+        <div class="form-group col-md-2"style="color:indigo">
+         Age: <input type="text" class="form-control" formControlName="age">
+     </div>
+     </div>
+        
+       
+       <div class="row">
+         <div class="form-group col-md-4" style="color:indigo">
+           Email: <input type="text" class="form-control" formControlName="email">
+         </div>
+         
+         <div class="form-group col-md-4" style="color:indigo">
+           Mobile No: <input type="text" class="form-control" formControlName="mobileNo">
+         </div>
+       </div>
+     <div class="row">
+     
+       <div class="form-group col-md-4" style="color:indigo">
+         Total Loan Required:<input type="text" class="form-control" formControlName="totalLoanRequired">
+       </div>
+       
+       <div class="form-group col-md-4" style="color:indigo">
+         Pancard No: <input type="text" class="form-control" formControlName="pancardNo">
+       </div>
+       
+     
+     </div>
+     <div class="row" >
+       <div class="form-group col-md-4" style="color:indigo">
+         Cibil Score:<input type="text" class="form-control" formControlName="cibilScore">
+       </div>
+       <div class="form-group col-md-4" style="color:indigo">
+         CibilScore Date Time: <input type="date" class="form-control" formControlName="cibilScoreDateTime">
+       </div>
+     
+     </div>
+     <div style="text-align:center">
+       <button style="background-color:green;color:white;"(click)="save()" >Save</button>
+      &nbsp; <button style="background-color:orange;color:white;"(click)="viewDetails()" >View Details</button>
+     </div>
+     </div>
+     <div *ngIf="pstate==2">
+    <h1 style="color:maroon;" >Enquiery Detail</h1>
+     <table class="table table-striped table-dark">
+    <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">FullName</th>
+          <th scope="col">Age</th>
+          <th scope="col">Mobile No.</th>
+          <th scope="col">Email</th>
+          <th scope="col">TotalLoanRequired</th>
+          <th scope="col">PanCard</th>
+          <th scope="col">CibilScore</th>
+          <th scope="col">CibilScoreDateTime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of  enquiryList">
+            <td>{{c.enquiryId}} </td>
+            <td>{{c.fullname}} </td>
+            <td>{{c.age}} </td>
+            <td>{{c.mobileNo}} </td>
+            <td>{{c.email}} </td>
+            <td>{{c.totalLoanRequired}} </td>
+            <td>{{c.pancardNo}} </td>
+            <td>{{c.cibilScore}} </td>
+            <td>{{c.cibilScoreDateTime}} </td>
+        </tr>
+      </tbody>
+</table>
+         <div style="text-align:center">
+           <button style="background-color:green;color:white;"(click)="back()" >Back</button>
+           
+         </div>
+         </div>
+     </form>
 </div>

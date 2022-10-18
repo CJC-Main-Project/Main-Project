@@ -16,4 +16,11 @@ export class DashboardComponent implements OnInit {
   log(){
     this.router.navigate(['login']);
   }
+  contact(){
+    this.router.navigate(['home','contact-us']);
+  }
+  about(){
+    this.router.navigate(['home','about-us']);
+  }
+
 }

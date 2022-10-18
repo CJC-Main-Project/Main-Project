@@ -22,17 +22,20 @@ const routes: Routes =[
     pathMatch: 'full',
   },
   {
-    path:'home',component:DashboardComponent
+    path:'home',component:DashboardComponent,
+    children:[
+      {
+        path:'contact-us',component:ContactUsComponent
+      },
+      {
+        path:'about-us',component:AboutUsComponent
+      }
+    ]
   },
   {
     path:'login',component:LoginComponent
   },
-  {
-    path:'contact-us',component:ContactUsComponent
-  },
-  {
-    path:'about-us',component:AboutUsComponent
-  },
+  
   {
     path:'role',component:AdminLayoutComponent,
     children:[

@@ -1,5 +1,6 @@
 export class EnquiryDetails {
- fullname:string;
+    enquiryId:number;
+    fullname:string;
 age:number;
 email:string;
 mobileNo:number;
