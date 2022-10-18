@@ -4,6 +4,7 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
 import { LoanTransferComponent } from './loan-transfer/loan-transfer.component';
 import { EmailRecipeComponent } from './email-recipe/email-recipe.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const ldrouting:Routes=[
   {
@@ -24,7 +25,7 @@ const ldrouting:Routes=[
     EmailRecipeComponent
   ],
   imports: [
-    CommonModule,RouterModule.forChild(ldrouting)
+    CommonModule,RouterModule.forChild(ldrouting),FormsModule,ReactiveFormsModule
   ]
 })
 export class LoanDisbursmentModule { }

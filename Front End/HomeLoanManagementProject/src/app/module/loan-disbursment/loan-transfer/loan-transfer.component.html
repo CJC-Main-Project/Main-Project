@@ -1,4 +1,63 @@
 
+
 <div class="main-content">
-    <p>loan-transfer works!</p>
+    
+    
+    <form [formGroup]="loanTransferForm" class="container" (ngSubmit)="transfer()">  
+        <p style="text-align: center;"><i><b>Loan Transfer Details</b></i></p>
+        <div class="row">
+            <div class="form-group col-md-4">
+              Agreement Id   :- &nbsp; <input type="text" class="form-control" disabled formControlName="agreementId">
+            </div>
+       
+    <div class="form-group col-md-4">
+        Loan No :- &nbsp; <input type="text" class="form-control" formControlName="loanNo">
+    </div>
 </div>
+<div class="row">
+    <div class="form-group col-md-4">
+        Amount Pay Type :- &nbsp; <input type="text" class="form-control" formControlName="amountPayType">
+    </div>
+
+    <div class="form-group col-md-4">
+        Total Amount :- &nbsp; <input type="text" class="form-control" formControlName="totalAmount">
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-4">
+        Bank Name :- &nbsp; <input type="text" class="form-control" formControlName="bankName">
+    </div>
+
+    <div class="form-group col-md-4">
+        Account Type :- &nbsp; <input type="text" class="form-control" formControlName="accounType">
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-4">
+        Account No :- &nbsp; <input type="text" class="form-control" formControlName="accountNumber">
+    </div>
+
+    <div class="form-group col-md-4">
+        IFSC Code :- &nbsp; <input type="text" class="form-control" formControlName="ifscCode">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="form-group col-md-4">
+        Payment Status :- &nbsp; <input type="text" class="form-control" formControlName="paymentStatus">
+    </div>
+
+    <div class="form-group col-md-4">
+        Amount Paid Date :- &nbsp; <input type="date" class="form-control" formControlName="amountPaidDate">
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-6">
+        Transfer Amount :- &nbsp; <input type="text" class="form-control" formControlName="transferAmount">
+    </div>
+</div> 
+<button type="submit">Transfer</button>
+</form>
+</div>
+

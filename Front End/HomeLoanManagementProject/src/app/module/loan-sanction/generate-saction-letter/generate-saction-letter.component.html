@@ -1,4 +1,78 @@
 
+
 <div class="main-content">
-    <p>generate-saction-letter works!</p>
+    
+    <form [formGroup]="sactionLetterForms" class="container" (ngSubmit)="sanction()">
+        <p style="text-align: center;"><i><b>Loan Sanction Letter</b></i></p>
+        <div class="row">
+            <div class="form-group col-md-4">
+                Sanction ID :- &nbsp; <input type="text" class="form-control" disabled formControlName="sanctionId">
+            </div>
+        
+            <div class="form-group col-md-4">
+                Sanction Date :- &nbsp; <input type="date" class="form-control" formControlName="sanctionDate">
+            </div>
+        </div> 
+        <div class="row">
+            <div class="form-group col-md-6">
+                Applicant Name :- &nbsp; <input type="text" class="form-control" formControlName="applicantName">
+            </div>
+        </div> 
+        <div class="row">
+            <div class="form-group col-md-4">
+                Mobile No :- &nbsp; <input type="text" class="form-control" formControlName="mobileNo">
+            </div>
+        
+            <div class="form-group col-md-4">
+                Email ID :- &nbsp; <input type="email" class="form-control" formControlName="email">
+            </div>
+        </div> 
+        <div class="row">
+            <div class="form-group col-md-4">
+                Loan Amount Sanctioned :- &nbsp; <input type="text" class="form-control" formControlName="loanAmtSanctioned">
+            </div>
+        
+            <div class="form-group col-md-4">
+                Loan Tenure :- &nbsp; <input type="text" class="form-control" formControlName="loanTenure">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                Interest Type :- &nbsp; <input type="text" class="form-control" formControlName="interestType">
+            </div>
+        
+            <div class="form-group col-md-4">
+                Rate of Interest :- &nbsp; <input type="text" class="form-control" formControlName="rateOfInterest">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="form-group col-md-4">
+              Monthly EMI Amount   :- &nbsp; <input type="text" class="form-control" formControlName="monthlyEmiAmount">
+            </div>
+       
+            <div class="form-group col-md-4">
+               Mode of Payment  :- &nbsp; <input type="text" class="form-control" formControlName="modeOfPayment">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+               Terms Condition  :- &nbsp; <input type="text" class="form-control" formControlName="termsCondition">
+            </div>
+       
+            <div class="form-group col-md-4">
+               Status  :- &nbsp; <input type="text" class="form-control" formControlName="status">
+            </div>
+        </div> 
+        <div class="row">
+            <div class="form-group col-md-6">
+                Remark :- &nbsp; <input type="text" class="form-control" formControlName="remark">
+            </div>
+        </div> 
+
+        
+        
+
+    </form>
 </div>
+
