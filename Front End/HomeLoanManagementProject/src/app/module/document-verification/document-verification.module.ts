@@ -4,6 +4,7 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
 import { EmailGenerateComponent } from './email-generate/email-generate.component';
 import { LoanTransferDetailsComponent } from './loan-transfer-details/loan-transfer-details.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const dvrouting:Routes=[
   {
@@ -24,7 +25,7 @@ const dvrouting:Routes=[
     LoanTransferDetailsComponent
   ],
   imports: [
-    CommonModule,RouterModule.forChild(dvrouting)
+    CommonModule,RouterModule.forChild(dvrouting),FormsModule,ReactiveFormsModule
   ]
 })
 export class DocumentVerificationModule { }

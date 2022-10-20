@@ -12,6 +12,8 @@ public interface SanctionLetterServiceI {
 
 	public void deleteSanctionLetter(Integer sanctionId);
 
+	public SanctionLetter getById(Integer sanctionId);
+
 
 
 	

@@ -53,6 +53,14 @@ public class SanctionLetterController
 		return "Delete Succesfully...!";
 		
 	}
+	
+	@GetMapping("/getSanction/{sanctionId}")
+	public  SanctionLetter getById(@PathVariable Integer sanctionId) {
+		SanctionLetter s=sls.getById(sanctionId);
+		System.out.println("ID :"+s.getSanctionId());
+		return s;
+	}
+	
 }
 
 

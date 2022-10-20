@@ -16,4 +16,9 @@ export class LoanDisbursmentService {
   getLoanDisbursment(){
   return this.http.get(this.url+"/getLoan")
 }
+
+getById(id:number){
+  console.log("ID :-"+id)
+  return this.http.get(this.url+"/getLoanById/"+id)
+}
 }

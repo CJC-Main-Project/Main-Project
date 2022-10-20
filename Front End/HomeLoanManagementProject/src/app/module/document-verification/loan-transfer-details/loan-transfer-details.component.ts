@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoanDisbursement } from 'app/model/loan-disbursement';
+import { LoanDisbursmentService } from 'app/shared/loan-disbursment.service';
 
 @Component({
   selector: 'app-loan-transfer-details',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoanTransferDetailsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private ser:LoanDisbursmentService) { }
+   diburstlist:LoanDisbursement[];
   ngOnInit(): void {
+
+    this.ser.getLoanDisbursment().subscribe((data:LoanDisbursement[])=>{
+       this.diburstlist=data;
+    })
   }
 
 }

@@ -12,4 +12,6 @@ public interface LoanDisbursementServiceI {
 
 	public void deleteLoan(Integer agreementId);
 
+	public LoanDisbursement getByid(Integer agreementId);
+
 }

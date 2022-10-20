@@ -1,32 +1,36 @@
-<!-- <p>dashboard works!</p> -->
-<div class="wrapper">
-    <div class="top_nav">
-        <h3 style="text-align: center;">Main Project</h3>
-    </div>
-    <div>
-        <ul class="nav nav-tabs">
+<body style="background-image: url(assets/img/ll.jpeg)">
+  <div>
+    <ul class="nav nav-tabs">
 
-            <li class="nav-item">
-                <a class="nav-link " routerLink="home">Home</a>
-            </li>&nbsp;
-            <li class="nav-item">
-                <a class="nav-link"(click)="contact()">Contact Us</a>
-            </li>&nbsp;
-            <li class="nav-item">
-                <a class="nav-link"(click)="about()">About Us</a>
-            </li>&nbsp;
-            <li class="nav-item" >
-                <a class="nav-link " (click)="log()" style="text-align: right;">Login</a>
-            </li>&nbsp;
-        </ul>
-       
-    </div>
-
-</div>
-
-<div>
+        <li class="nav-item">
+            <a class="nav-link " (click)="home()">Home</a>
+        </li>&nbsp;
+        <li class="nav-item">
+            <a class="nav-link"(click)="contact()">Contact Us</a>
+        </li>&nbsp;
+        <li class="nav-item">
+            <a class="nav-link"(click)="about()">About Us</a>
+        </li>&nbsp;
+        <li class="nav-item" style="text-align: right;" >
+            <a class="nav-link " (click)="log()" >Login</a>
+        </li>&nbsp;
+    </ul>
     
 </div>
+
+
+ 
+<router-outlet></router-outlet>
+</body>
+
+<!-- <div class="wrapper"> -->
+    <!-- <div class="top_nav">
+        <h3 style="text-align: center;">Main Project</h3>
+    </div> -->
+    
+
+
+ 
 <!-- <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -56,4 +60,4 @@
         </form>
     </div>
   </nav> -->
-<router-outlet></router-outlet>
+

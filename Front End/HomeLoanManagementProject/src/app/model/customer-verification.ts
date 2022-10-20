@@ -1,5 +1,5 @@
 export class CustomerVerification {
-    verificationID:number;
+    verificationId:number;
     verificationDate:string;
     status:string;
     remarks:string;

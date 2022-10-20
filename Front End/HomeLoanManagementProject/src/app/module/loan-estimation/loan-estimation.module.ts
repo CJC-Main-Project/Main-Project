@@ -4,7 +4,7 @@ import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.componen
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { GenerateReportComponent } from './generate-report/generate-report.component';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const lerouting:Routes=[
   {
@@ -25,7 +25,7 @@ const lerouting:Routes=[
     GenerateReportComponent
   ],
   imports: [
-    CommonModule,RouterModule.forChild(lerouting),FormsModule
+    CommonModule,RouterModule.forChild(lerouting),FormsModule,ReactiveFormsModule
   ]
 })
 export class LoanEstimationModule { }

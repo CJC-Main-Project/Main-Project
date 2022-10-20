@@ -1,4 +1,41 @@
 
-<div class="main-content">
+<!-- <div class="main-content">
     <p>loan-transfer-details works!</p>
+</div> -->
+<div class="main-content">
+
+    <p style="text-align: center;"><i><b> Loan Transfer Details </b></i></p>
+
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+            <th scope="col">agreementId</th>
+            <th scope="col">loanNo</th>
+            <th scope="col">amountPayType</th>
+            <th scope="col">totalAmount</th>
+            <th scope="col">bankName</th>
+            <th scope="col">accountNumber</th>
+            <th scope="col">IFSCCode</th>
+            <th scope="col">accountType</th>
+            <th scope="col">transferAmount</th>
+            <th scope="col">paymentStatus</th>
+            <th scope="col">amountPaidDate</th>   
+            </tr>
+         </thead>
+            <tbody>
+                <tr *ngFor="let l of  diburstlist">
+                    <td>{{l.agreementId}}</td>
+                     <td>{{l.loanNo}}</td>
+                    <td>{{l.amountPayType}}</td>
+                    <td>{{l.totalAmount}}</td>
+                    <td>{{l.bankName}}</td>
+                    <td>{{l.accountNumber}}</td>
+                    <td>{{l.ifscCode}}</td>
+                    <td>{{l.accountType}}</td>
+                    <td>{{l.transferAmount}}</td>
+                    <td>{{l.paymentStatus}}</td>
+                    <td>{{l.amountPaidDate}}</td>
+                 </tr>
+            </tbody>
+    </table>
 </div>

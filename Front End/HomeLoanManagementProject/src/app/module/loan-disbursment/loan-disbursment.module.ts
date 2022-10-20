@@ -14,7 +14,7 @@ const ldrouting:Routes=[
     path:'email-recipe',component:EmailRecipeComponent
   },
   {
-    path:'loan-transfer',component:LoanTransferComponent
+    path:'loan-transfer/:id',component:LoanTransferComponent
   }
 ]
 

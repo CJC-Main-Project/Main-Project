@@ -14,16 +14,20 @@ import { LoanSanctionModule } from './module/loan-sanction/loan-sanction.module'
 import { LoanDisbursmentModule } from './module/loan-disbursment/loan-disbursment.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'dashbord/home',
     pathMatch: 'full',
   },
   {
-    path:'home',component:DashboardComponent,
+    path:'dashbord',component:DashboardComponent,
     children:[
+      {
+        path:'home',component:HomeComponent
+      },
       {
         path:'contact-us',component:ContactUsComponent
       },

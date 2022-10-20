@@ -38,7 +38,7 @@ public class CustomerVerificationController
      	return list;
      }
 
-     @PutMapping("/updateCustomerVerification/{verificationID}")
+     @PutMapping("/updateCustomerVerification/{verificationId}")
      public String updateCustomerVerification(@RequestBody CustomerVerification cv)
      {
      	         cvs.save(cv);
@@ -46,10 +46,10 @@ public class CustomerVerificationController
      	   return "Details updated suceesfully";
      }
 
-     @DeleteMapping("/deleteCustomerVerification/{verificationID}")
-     public String deleteCustomerVerification(@PathVariable Integer verificationID )
+     @DeleteMapping("/deleteCustomerVerification/{verificationId}")
+     public String deleteCustomerVerification(@PathVariable Integer verificationId )
      {
-     	cvs.deleteCustomerVerification(verificationID);
+     	cvs.deleteCustomerVerification(verificationId);
      	
      	return "details deleted successfully";
      }

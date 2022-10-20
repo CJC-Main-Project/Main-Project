@@ -8,9 +8,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const lsrouting:Routes=[
   {
     path:'view-details',component:ViewDetailsComponent
+   
   },
   {
-    path:'generate-sanction-letter',component:GenerateSactionLetterComponent
+    path:'generate-sanction-letter/:id',component:GenerateSactionLetterComponent
   }
 ]
 

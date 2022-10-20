@@ -11,6 +11,6 @@ public interface CustomerVerificationServiceI {
 
 	public List<CustomerVerification> getCustomerVerification();
 
-	public void deleteCustomerVerification(Integer verificationID);
+	public void deleteCustomerVerification(Integer verificationId);
 
 }

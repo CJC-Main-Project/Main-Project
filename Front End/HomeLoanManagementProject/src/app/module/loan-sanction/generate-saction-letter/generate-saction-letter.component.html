@@ -1,7 +1,8 @@
 
 
 <div class="main-content">
-    
+    <div class="row">
+        <div class="form-group col-md-8">
     <form [formGroup]="sactionLetterForms" class="container" (ngSubmit)="sanction()">
         <p style="text-align: center;"><i><b>Loan Sanction Letter</b></i></p>
         <div class="row">
@@ -69,10 +70,18 @@
                 Remark :- &nbsp; <input type="text" class="form-control" formControlName="remark">
             </div>
         </div> 
-
-        
-        
-
+        <button type="submit" class="btn btn-success">Sanction</button>
     </form>
+    </div>
+    <!-- <div class="form-group col-md-3">
+        <button type="button" class="btn btn-secondary btn-lg btn-block"
+            (click)="generatePDF('download')">Download Invoice</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block"
+            (click)="generatePDF('print')">Print  Invoice</button>
+        <button type="submit" class="btn btn-secondary btn-lg btn-block"
+            (click)="generatePDF()">Open Invoice</button>
+    </div> -->
 </div>
-
+   
+</div>
+<router-outlet></router-outlet>

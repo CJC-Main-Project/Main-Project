@@ -1,4 +1,32 @@
 
 <div class="main-content">
-    <p>email-generate works!</p>
+    <p style="text-align: center;"><i><b>Email To Customer</b></i></p>
+    <form [formGroup]="emailForm" class="container" (ngSubmit)="sendEmail()">
+        <div class="row">
+            <div class="form-group col-md-6">
+                To Email :- &nbsp; <input type="text" class="form-control" formControlName="toEmail">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-9">
+                Subject :- &nbsp; <input type="text" class="form-control" formControlName="subject">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-9">
+                TextBody :-
+            </div>
+        </div>
+        <div >
+            <textarea name="" id="" formControlName="textbody" cols="100" rows="10" placeholder="Enter Loan Transfer Information">
+                
+              </textarea>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                Attachment :- &nbsp; <input type="file" class="form-control" (change)="attach($event)">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
 </div>

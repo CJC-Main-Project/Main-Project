@@ -13,14 +13,17 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  home(){
+    this.router.navigate(['dashbord','home']);
+  }
   log(){
     this.router.navigate(['login']);
   }
   contact(){
-    this.router.navigate(['home','contact-us']);
+    this.router.navigate(['dashbord','contact-us']);
   }
   about(){
-    this.router.navigate(['home','about-us']);
+    this.router.navigate(['dashbord','about-us']);
   }
 
 }

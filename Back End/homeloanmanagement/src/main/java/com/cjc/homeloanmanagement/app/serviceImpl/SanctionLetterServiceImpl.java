@@ -36,4 +36,10 @@ public class SanctionLetterServiceImpl implements SanctionLetterServiceI{
 		
 	}
 
+	@Override
+	public SanctionLetter getById(Integer sanctionId) {
+	
+		return slr.getById(sanctionId);
+	}
+
 }

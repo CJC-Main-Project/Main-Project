@@ -17,7 +17,7 @@ public class CustomerVerification {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer verificationID;
+	private Integer verificationId;
 	private String verificationDate;
 	private String status;
 	private String remarks;

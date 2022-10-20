@@ -122,6 +122,13 @@ public class CustomerController {
 		return list;
 	}
 	
+	@GetMapping("/getById/{customerId}")
+	public Customer getById(@PathVariable Integer customerId)
+	{
+		Customer c=cs.getById(customerId);
+		return c;
+	}
+	
 	@PutMapping("/updateCustomer/{customerId}")
 	public String updateCustomer(@RequestBody Customer c)
 	{

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const svrouting:Routes=[
   {
@@ -14,7 +15,7 @@ const svrouting:Routes=[
     ViewDetailsComponent
   ],
   imports: [
-    CommonModule,RouterModule.forChild(svrouting)
+    CommonModule,RouterModule.forChild(svrouting),FormsModule,ReactiveFormsModule
   ]
 })
 export class SiteVisitModule { }

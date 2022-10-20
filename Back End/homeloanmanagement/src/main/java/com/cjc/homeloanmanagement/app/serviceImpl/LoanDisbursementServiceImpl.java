@@ -35,4 +35,10 @@ public class LoanDisbursementServiceImpl implements LoanDisbursementServiceI
 		// TODO Auto-generated method stub
 		ldr.deleteById(agreementId);
 	}
+
+	@Override
+	public LoanDisbursement getByid(Integer agreementId) {
+		
+		return ldr.getById(agreementId);
+	}
 }

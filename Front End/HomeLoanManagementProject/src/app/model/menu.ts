@@ -22,12 +22,12 @@ export class Menu {
             {path: "view-details", title: "View Details", icon: "pe-7s-graph", class: "" }
           ],
           ls: [
-            {path: "generate-sanction-letter", title: "Generate Sanction Letter", icon: "pe-7s-graph", class: "" },
+            {path: "generate-sanction-letter/:id", title: "Generate Sanction Letter", icon: "pe-7s-graph", class: "" },
             {path: "view-details", title: "View Details", icon: "pe-7s-graph", class: "" }
           ],
           ld: [
             {path: "email-recipe", title: "Email Recipe", icon: "pe-7s-graph", class: "" },
-            {path: "loan-transfer", title: "Loan Transfer", icon: "pe-7s-graph", class: "" },
+            {path: "loan-transfer/:id", title: "Loan Transfer", icon: "pe-7s-graph", class: "" },
             {path: "view-details", title: "View Details", icon: "pe-7s-graph", class: "" }
           ],
           

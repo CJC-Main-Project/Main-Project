@@ -15,9 +15,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/generate-report', title: 'Generate Report',  icon:'pe-7s-bell', class: '' },
     { path: '/loan-transfer-details', title: 'Loan Transfer Details',  icon:'pe-7s-rocket', class: 'active-pro' },
     { path: '/email-generate', title: 'Email Generate',  icon: 'pe-7s-graph', class: '' },
-    { path: '/generate-sanction-letter', title: 'Generate Sanction Letter',  icon: 'pe-7s-graph', class: '' },
+    { path: '/generate-sanction-letter/:id', title: 'Generate Sanction Letter',  icon: 'pe-7s-graph', class: '' },
     { path: '/email-recipe', title: 'Email Recipe',  icon: 'pe-7s-graph', class: '' },
-    { path: '/loan-transfer', title: 'Loan Transfer',  icon: 'pe-7s-graph', class: '' },
+    { path: '/loan-transfer/:id', title: 'Loan Transfer',  icon: 'pe-7s-graph', class: '' },
     { path: '/enquiry-details', title: 'Enquiry Details',  icon:'pe-7s-news-paper', class: '' },
     
 ];

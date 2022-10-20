@@ -1,6 +1,12 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Customer } from 'app/model/customer';
+import { CustomerVerification } from 'app/model/customer-verification';
+import { CustomerVerificationService } from 'app/shared/customer-verification.service';
 import { CustomerService } from 'app/shared/customer.service';
+
 
 @Component({
   selector: 'app-view-details',
@@ -9,13 +15,41 @@ import { CustomerService } from 'app/shared/customer.service';
 })
 export class ViewDetailsComponent implements OnInit {
 
-  constructor(private ser:CustomerService) { }
+  constructor(private ser:CustomerService,private fb:FormBuilder,private vser:CustomerVerificationService,private router:Router) { }
 
   customerList:Customer[];
-
+   verificationForm:FormGroup;
   ngOnInit(): void {
+    this.verificationForm=this.fb.group({
+      verificationId:[''],
+      verificationDate:[''],
+      status:[''],
+      remarks:[''],
+    })
     this.ser.getCustomer().subscribe((data:Customer[])=>{
       this.customerList=data;
     })
+    
   }
+
+   masg:string;
+  approved(c:Customer){
+    console.log("Cus Ver ID :"+c.customerverification.verificationId)
+    this.masg="Approed By Sanction Officer";
+    this.verificationForm.get('verificationId').setValue(c.customerverification.verificationId);
+       this.verificationForm.get('status').setValue(this.masg); 
+         this.vser.updateVerification(this.verificationForm.value).subscribe();
+}
+reject(c:Customer){
+  console.log("Cus Ver ID :"+c.customerverification.verificationId)
+  this.masg="Reject By Sanction Officer";
+  this.verificationForm.get('verificationId').setValue(c.customerverification.verificationId);
+     this.verificationForm.get('status').setValue(this.masg); 
+       this.vser.updateVerification(this.verificationForm.value).subscribe();
+}
+
+sanction(id:number){
+  sessionStorage.setItem('role','ls');
+       this.router.navigate(['role/ls/generate-sanction-letter',id]);
+}
 }

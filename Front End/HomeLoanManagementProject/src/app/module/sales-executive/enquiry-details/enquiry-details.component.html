@@ -45,8 +45,8 @@
      
      </div>
      <div style="text-align:center">
-       <button style="background-color:green;color:white;"(click)="save()" >Save</button>
-      &nbsp; <button style="background-color:orange;color:white;"(click)="viewDetails()" >View Details</button>
+       <button type="button" class="btn btn-success" (click)="save()" >Save</button>
+      &nbsp; <button type="button" class="btn btn-info" (click)="viewDetails()" >View Details</button>
      </div>
      </div>
      <div *ngIf="pstate==2">
@@ -80,7 +80,7 @@
       </tbody>
 </table>
          <div style="text-align:center">
-           <button style="background-color:green;color:white;"(click)="back()" >Back</button>
+           <button type="button" class="btn btn-warning" (click)="back()" >Back</button>
            
          </div>
          </div>

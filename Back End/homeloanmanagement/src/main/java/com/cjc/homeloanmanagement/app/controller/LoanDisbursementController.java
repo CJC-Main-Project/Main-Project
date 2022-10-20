@@ -36,6 +36,18 @@ public class LoanDisbursementController {
 		return list;
 	}
 	
+	@GetMapping("/getLoanById/{agreementId}")
+	public LoanDisbursement getByid(@PathVariable Integer agreementId)
+	{
+		LoanDisbursement ld=lds.getByid(agreementId);
+		return ld;
+	}
+	
+	
+	
+	
+	
+	
 	@PutMapping("/updateLoan/{agreementId}")
 	public String updateLoan(@RequestBody LoanDisbursement ld)
 	{

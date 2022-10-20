@@ -30,9 +30,9 @@ public List<CustomerVerification> getCustomerVerification() {
 }
 
 @Override
-public void deleteCustomerVerification(Integer verificationID) {
+public void deleteCustomerVerification(Integer verificationId) {
      
-	cvr.deleteById(verificationID);
+	cvr.deleteById(verificationId);
 }
 
 
