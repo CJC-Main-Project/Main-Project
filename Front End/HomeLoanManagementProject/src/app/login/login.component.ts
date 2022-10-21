@@ -28,31 +28,37 @@ export class LoginComponent implements OnInit {
      {
       sessionStorage.setItem('role','se');
        this.router.navigateByUrl("role/se/emi-calculator");
+       alert("Sales Executavive Login Successfully....");
      }
      if(u.username === 'le' && u.password ==='le')
      {
       sessionStorage.setItem('role','le');
        this.router.navigateByUrl("role/le/view-details");
+       alert("Loan Estimation Login Successfully....");
      }
      if(u.username === 'dv' && u.password ==='dv')
      {
       sessionStorage.setItem('role','dv');
        this.router.navigateByUrl("role/dv/view-details");
+       alert("Document Verification Login Successfully....");
      }
      if(u.username === 'sv' && u.password ==='sv')
      {
       sessionStorage.setItem('role','sv');
        this.router.navigateByUrl("role/sv/view-details");
+       alert("Site Visit Login Successfully....");
      }
      if(u.username === 'ls' && u.password ==='ls')
      {
       sessionStorage.setItem('role','ls');
        this.router.navigateByUrl("role/ls/view-details");
+       alert("Loan Sanction Login Successfully....");
      }
      if(u.username === 'ld' && u.password ==='ld')
      {
       sessionStorage.setItem('role','ld');
        this.router.navigateByUrl("role/ld/view-details");
+       alert("Loan Disbursment Login Successfully....");
      }
   }
 }

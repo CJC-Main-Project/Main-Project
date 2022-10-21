@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EnquiryDetails } from 'app/model/enquiry-details';
@@ -32,9 +33,20 @@ export class EnquiryDetailsComponent implements OnInit {
 
 }
 pstate:number=1;
+
+
 save()
-{
-   this.ser.postEnquiery(this.edform.value).subscribe()
+{ 
+  console.log(this.edform.controls['cibilScore'].value >=650)
+  if(this.edform.controls['cibilScore'].value >=650)
+  {
+    this.ser.postEnquiery(this.edform.value).subscribe()
+    alert("Customer is eligible for home loan")
+  }
+  else{
+    alert("Customer is not eligible for home loan")
+  }
+  
 }
 viewDetails()
 {

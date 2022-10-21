@@ -8,5 +8,5 @@ constructionArea:string;
 propertyPrice:number;
 constructionPrice:number;
 propertyAddress:PropertyAddress;
-
+propertyDocuments:any[];
 }

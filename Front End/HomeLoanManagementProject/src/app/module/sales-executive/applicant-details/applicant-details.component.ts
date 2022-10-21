@@ -175,7 +175,7 @@ export class ApplicantDetailsComponent implements OnInit {
     d.append("bankStatement",this.cbankStatement);
     d.append("information",doc);
     this.ser.postCustomer(d).subscribe();
-
+    alert("Registration Successful...");
   }
 
   

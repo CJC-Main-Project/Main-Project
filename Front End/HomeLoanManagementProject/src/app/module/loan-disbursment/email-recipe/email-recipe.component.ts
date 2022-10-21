@@ -44,5 +44,6 @@ export class EmailRecipeComponent implements OnInit {
     d.append("attachment",this.eattch);
     d.append("information",doc)
     this.ser.sendEmail(d).subscribe();
+    alert("Email Send Successfully....");
   }
 }

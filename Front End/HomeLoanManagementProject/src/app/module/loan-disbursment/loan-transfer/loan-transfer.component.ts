@@ -66,5 +66,6 @@ export class LoanTransferComponent implements OnInit {
 
 transfer(){
   this.ser.updateLoanDisbursement(this.loanTransferForm.value).subscribe();
+  alert("Loan Transfer Successfully....");
  }
 }
