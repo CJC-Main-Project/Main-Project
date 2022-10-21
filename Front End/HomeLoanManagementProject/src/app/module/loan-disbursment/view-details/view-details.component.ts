@@ -50,8 +50,8 @@ transfer(id:number){
        this.router.navigate(['role/ld/loan-transfer',id]);
 }
 
-// email(id:number){
-//   sessionStorage.setItem('role','ld');
-//   this.router.navigate(['role/ld/email-recipe',id]);
-// }
+allDetail(id:number){
+  sessionStorage.setItem('role','ad');
+  this.router.navigate(['role/ad/all-details',id]);
+ }
 }

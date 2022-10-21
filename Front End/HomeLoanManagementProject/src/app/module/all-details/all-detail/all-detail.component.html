@@ -1,0 +1,340 @@
+
+
+
+<div class="main-content">
+  
+    <!-- <form [formGroup]="customerForm" class="container" (ngSubmit)="saveCustomer()"> -->
+            <p style="text-align: center;"><i><b>Customer Personal Information</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-2">
+                    Id :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerId}}">
+                </div>
+                <div class="form-group col-md-4">
+                    Full Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerName}}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                   Date Of Birth :- &nbsp; <input type="date" class="form-control" value="{{cobj.customerDateOfBirth}}" >
+                </div>&nbsp;
+                <div class="form-group col-md-3">
+                    Gender :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerGender}}" >
+                </div>&nbsp;
+                <div class="form-group col-md-2">
+                    Age :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAge}}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Mobile No :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerMobileNumber}}"  >
+                </div>
+                <div class="form-group col-md-4">
+                    Additional Mobile No :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAdditionalMobileNumber}}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                   Email :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerEmail}}"  >
+                </div>
+                <div class="form-group col-md-4">
+                   Total Loan Required :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerTotalLoanRequired}}" >
+                </div>
+            </div>
+             <!-- <div formGroupName="customerAddress"> -->
+            <p style="text-align: center;"><i><b> Customer Address</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Street Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.streetName}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    Area Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.areaName}}" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                    City Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.cityName}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    House Number :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.houseNumber}}" >
+                </div>
+                <div class="form-group col-md-2">
+                    Pincode :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.pincode}}"  >
+                </div>
+            </div>     
+            <div class="row">
+                <div class="form-group col-md-3">
+                    District :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.district}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    State :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.state}}"  >
+                </div>
+                <div class="form-group col-md-2">
+                    Country :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerAddress.country}}"  >
+                </div>
+            </div>
+             <!-- </div>    -->
+            
+        
+       
+            <!-- <div formGroupName="mortgageDetails"> -->
+            <p style="text-align: center;"><i><b>Mortgage Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    Property Type :- &nbsp; <input type="text" class="form-control" value="{{cobj.mortgageDetails.mortgagePropertyType}}">
+
+                </div>
+                <div class="form-group col-md-3">
+                    Property value :- &nbsp; <input type="text" class="form-control" value="{{cobj.mortgageDetails.mortgagePropertyValue}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    Loan On Property :- &nbsp; <input type="text" class="form-control" value="{{cobj.mortgageDetails.mortgageLoanOnProperty}}" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Property Proof :- &nbsp; <input type="file" class="form-control" >
+                </div>
+                <div class="form-group col-md-4">
+                    Property Insurance :- &nbsp; <input type="file" class="form-control" >
+                </div>
+            </div>
+            <!-- </div>  -->
+            <!-- <div formGroupName="profession"> -->
+            <p style="text-align: center;"><i><b>Profession Details</b></i></p>  
+            <div class="row">
+                <div class="form-group col-md-3">
+                    Profession Type :- &nbsp; <input type="text" class="form-control" value="{{cobj.profession.professionType}}">
+                </div>
+                <div class="form-group col-md-3">
+                    Profession Working Period :- &nbsp; <input type="text" class="form-control" value="{{cobj.profession.professionWorkingPeriod}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    Profession Yearly Income :- &nbsp; <input type="text" class="form-control" value="{{cobj.profession.professionYearlyIncome}}" >
+                </div>
+            </div> 
+            <!-- </div>  -->
+            <!-- <div formGroupName="customerverification"> -->
+                <p style="text-align: center;"><i><b>Verification Details</b></i></p>  
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        Verification Date :- &nbsp; <input type="date" class="form-control"  value="{{cobj.customerverification.verificationDate}}"  >
+                    </div>
+                    <div class="form-group col-md-3">
+                        Status :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerverification.status}}" >
+                    </div>
+                    <div class="form-group col-md-3">
+                        Remarks :- &nbsp; <input type="text" class="form-control" value="{{cobj.customerverification.remarks}}" >
+                    </div>
+                </div> 
+                <!-- </div> 
+            <div formGroupName=" dependentInfo"> -->
+            <p style="text-align: center;"><i><b>Dependent Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-3">
+                   Father Name :- &nbsp; <input type="text" class="form-control"  value="{{cobj.dependentInfo.fatherName}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    Mother Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.dependentInfo.motherName}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    Spouse Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.dependentInfo.spouseName}}" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                   No Of Family Member :- &nbsp; <input type="text" class="form-control" value="{{cobj.dependentInfo.noOfFamilyMember}}" >
+                </div>
+                <div class="form-group col-md-3">
+                   Family Income :- &nbsp; <input type="text" class="form-control" value="{{cobj.dependentInfo.familyIncome}}" >
+                </div>
+                <div class="form-group col-md-3">
+                   Marital Status :- &nbsp; <input type="text" class="form-control" value="{{cobj.dependentInfo.maritalStatus}}" >
+                </div>
+            </div>
+            <!-- </div>  -->
+           
+            <!-- <div formGroupName=" propertyinfo"> -->
+            <p style="text-align: center;"><i><b>Property Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Property Type :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyType}}" >
+                </div>
+                <div class="form-group col-md-4">
+                    Property Document :- &nbsp; <input type="file" class="form-control" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Property Total Area :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyTotalArea}}" >
+                </div>
+                <div class="form-group col-md-4">
+                    Property Construction Area  :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.constructionArea}}" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Property Price :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyPrice}}" >
+                </div>
+                <div class="form-group col-md-4">
+                    Consttruction Price  :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.constructionPrice}}" >
+                </div>
+            </div>
+         
+            <!-- <div formGroupName="propertyAddress"> -->
+            <p style="text-align: center;"><i><b> Property Address</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Street Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyAddress.streetName}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    Area Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyAddress.areaName}}"  >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                    City Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyAddress.cityName}}"  >
+                </div>
+                <div class="form-group col-md-3">
+                    House Number :- &nbsp; <input type="text" class="form-control"  >
+                </div>
+                <div class="form-group col-md-2">
+                    Pincode :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyAddress.pincode}}"  >
+                </div>
+            </div>     
+            <div class="row">
+                <div class="form-group col-md-3">
+                    District :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyAddress.district}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    State :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyAddress.state}}"  >
+                </div>
+                <div class="form-group col-md-2">
+                    Country :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyAddress.country}}"  >
+                </div>
+            </div>
+            <!-- </div>
+            </div>
+            
+            <div formGroupName="guarantordetails"> -->
+            <p style="text-align: center;"><i><b>Guarantor Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Full Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorName}}" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Pancard No. :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorPancardNo}}">
+                </div>
+                <div class="form-group col-md-4">
+                    Adharcard No.  :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAdharCardNo}}" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                   Mobile No. :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorMobileNo}}">
+                </div>
+                <div class="form-group col-md-4">
+                    Yearly Income  :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorYearlyIncome}}" >
+                </div>
+            </div> 
+            <!-- <div formGroupName="guarantorAddress"> -->
+            <p style="text-align: center;"><i><b> Guarantor Address</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    Street Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAddress.streetName}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    Area Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAddress.areaName}}" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-3">
+                    City Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAddress.cityName}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    House Number :- &nbsp; <input type="text" class="form-control"  >
+                </div>
+                <div class="form-group col-md-2">
+                    Pincode :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAddress.pincode}}"  >
+                </div>
+            </div>     
+            <div class="row">
+                <div class="form-group col-md-3">
+                    District :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAddress.district}}" >
+                </div>
+                <div class="form-group col-md-3">
+                    State :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAddress.state}}" >
+                </div>
+                <div class="form-group col-md-2">
+                    Country :- &nbsp; <input type="text" class="form-control" value="{{cobj.guarantordetails.guarantorAddress.country}}"  >
+                </div>
+            </div>
+            <!-- </div>
+            </div>
+          
+            <div formGroupName="bankAccountDetails"> -->
+            <p style="text-align: center;"><i><b>Bank Account Details</b></i></p>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Account Holder Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.accountHolderName}}" >
+                </div>
+                <div class="form-group col-md-4">
+                    Account Type  :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.accounType}}"  >
+                </div>
+            </div> 
+             <div class="row">
+                <div class="form-group col-md-4">
+                    Bank Name :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.bankName}}"  >
+                </div>
+                <div class="form-group col-md-4">
+                    Branch Name  :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.branchName}}">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Account Status :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.accountStatus}}"  >
+                </div>
+                <div class="form-group col-md-4">
+                    Account Balance  :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.accountBalance}}"  >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Account No. :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.accountNumber}}"  >
+                </div>
+                <div class="form-group col-md-4">
+                    IFSC Code  :- &nbsp; <input type="text" class="form-control" value="{{cobj.bankAccountDetails.ifsccode}}"  >
+                </div>
+            </div> 
+            <!-- </div>
+            <div formGroupName=""></div> -->
+            <p style="text-align: center;"><i><b>All Personal Document</b></i></p> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Photp :- &nbsp; <input type="file" class="form-control" >
+                </div>
+                <div class="form-group col-md-4">
+                    Signiture  :- &nbsp; <input type="file" class="form-control" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Adharcard :- &nbsp; <input type="file" class="form-control" >
+                </div>
+                <div class="form-group col-md-4">
+                    Pancard  :- &nbsp; <input type="file" class="form-control" >
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Bank Cheque :- &nbsp; <input type="file" class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    Bank Statement  :- &nbsp; <input type="file" class="form-control">
+                </div>
+            </div> 
+            &nbsp;<button  class="btn btn-secondary" (click)="back()" >Back</button>
+            
+    <!-- </form> -->
+</div>

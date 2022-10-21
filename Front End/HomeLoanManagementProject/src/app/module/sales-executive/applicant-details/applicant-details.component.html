@@ -68,7 +68,7 @@
                 </div>
             </div>
              </div>   
-            &nbsp;<button (click)="nextDiv()">Next</button>
+            &nbsp;<button  class="btn btn-info" (click)="nextDiv()">Next</button>
         </div>
         <div *ngIf="pstate==2">
             <div formGroupName="mortgageDetails">
@@ -121,7 +121,7 @@
                     </div>
                 </div> 
                 </div> 
-            <div formGroupName=" dependentInfo">
+            <div formGroupName="dependentInfo">
             <p style="text-align: center;"><i><b>Dependent Details</b></i></p>
             <div class="row">
                 <div class="form-group col-md-3">
@@ -146,11 +146,11 @@
                 </div>
             </div>
             </div> 
-            &nbsp;<button (click)="backDiv()">Back</button>
-            &nbsp;<button (click)="nextDiv()">Next</button>  
+            &nbsp;<button class="btn btn-info" (click)="backDiv()">Back</button>
+            &nbsp;<button  class="btn btn-info" (click)="nextDiv()">Next</button>  
         </div>
         <div *ngIf="pstate==3">
-            <div formGroupName=" propertyinfo">
+            <div formGroupName="propertyinfo">
             <p style="text-align: center;"><i><b>Property Details</b></i></p>
             <div class="row">
                 <div class="form-group col-md-4">
@@ -211,8 +211,8 @@
             </div>
             </div>
             </div>
-            &nbsp;<button (click)="backDiv()">Back</button>
-            &nbsp;<button (click)="nextDiv()">Next</button>     
+            &nbsp;<button type="button" class="btn btn-info" (click)="backDiv()">Back</button>
+            &nbsp;<button type="button" class="btn btn-info" (click)="nextDiv()">Next</button>     
         </div> 
         <div *ngIf="pstate==4">
             <div formGroupName="guarantordetails">
@@ -272,8 +272,8 @@
             </div>
             </div>
             </div>
-            &nbsp;<button (click)="backDiv()">Back</button>
-            &nbsp;<button (click)="nextDiv()">Next</button>     
+            &nbsp;<button type="button" class="btn btn-info" (click)="backDiv()">Back</button>
+            &nbsp;<button type="button" class="btn btn-info" (click)="nextDiv()">Next</button>     
         </div>  
         <div *ngIf="pstate==5">
             <div formGroupName="bankAccountDetails">
@@ -337,8 +337,8 @@
                     Bank Statement  :- &nbsp; <input type="file" class="form-control" (change)="bankStatement($event)">
                 </div>
             </div> 
-            &nbsp;<button (click)="backDiv()">Back</button>
-            &nbsp;<button type="submit">Save</button>
+            &nbsp;<button type="button"  class="btn btn-info" (click)="backDiv()">Back</button>
+            &nbsp;<button type="submit" class="btn btn-success" >Save</button>
         </div>  
     </form>
 </div>

@@ -23,7 +23,7 @@
                 <td>{{c.customerMobileNumber}} </td>
                 <td>{{c.customerverification.status}} </td>
                 <td>
-                    <button class="btn" class="btn btn-info" >Show-Details</button>
+                    <button class="btn" class="btn btn-info" (click)="allDetail(c.customerId)" >Show-Details</button>
                 </td>
                 <td>
                     <button type="button" class="btn btn-success" (click)="approved(c)">Approved</button>

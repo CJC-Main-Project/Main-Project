@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Customer } from 'app/model/customer';
 import { CustomerVerificationService } from 'app/shared/customer-verification.service';
 import { CustomerService } from 'app/shared/customer.service';
@@ -11,7 +12,7 @@ import { CustomerService } from 'app/shared/customer.service';
 })
 export class ViewDetailsComponent implements OnInit {
 
-  constructor(private ser:CustomerService,private fb:FormBuilder,private vser:CustomerVerificationService) { }
+  constructor(private ser:CustomerService,private fb:FormBuilder,private vser:CustomerVerificationService,private router:Router) { }
 
   customerList:Customer[];
    verificationForm:FormGroup;
@@ -43,4 +44,8 @@ reject(c:Customer){
      this.verificationForm.get('status').setValue(this.masg); 
        this.vser.updateVerification(this.verificationForm.value).subscribe();
 }
+allDetail(id:number){
+  sessionStorage.setItem('role','ad');
+  this.router.navigate(['role/ad/all-details',id]);
+ }
 }

@@ -19,7 +19,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/email-recipe', title: 'Email Recipe',  icon: 'pe-7s-graph', class: '' },
     { path: '/loan-transfer/:id', title: 'Loan Transfer',  icon: 'pe-7s-graph', class: '' },
     { path: '/enquiry-details', title: 'Enquiry Details',  icon:'pe-7s-news-paper', class: '' },
-    
+    { path: '/all-details/:id', title: 'All Details',  icon:'pe-7s-news-paper', class: '' },
 ];
 
 @Component({

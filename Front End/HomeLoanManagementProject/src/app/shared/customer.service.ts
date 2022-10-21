@@ -22,8 +22,8 @@ export class CustomerService {
     return this.http.get<Customer[]>(this.url+"/getCustomer");
   }
 
-  getById(id:number):Observable<Customer[]>
+  getById(id:number)
   {
-    return this.http.get<Customer[]>(this.url+"/getById"+id);
+    return this.http.get(this.url+"/getById/"+id);
   }
 }

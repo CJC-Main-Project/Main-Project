@@ -16,6 +16,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 
+import { AllDetailsModule } from './module/all-details/all-details.module';
+
 const routes: Routes =[
   {
     path: '',
@@ -43,6 +45,9 @@ const routes: Routes =[
   {
     path:'role',component:AdminLayoutComponent,
     children:[
+      {
+        path:'ad',loadChildren:()=>AllDetailsModule
+      },
       {
         path:'se',loadChildren:()=>SalesExecutiveModule
       },

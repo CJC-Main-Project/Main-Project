@@ -30,7 +30,9 @@ export class Menu {
             {path: "loan-transfer/:id", title: "Loan Transfer", icon: "pe-7s-graph", class: "" },
             {path: "view-details", title: "View Details", icon: "pe-7s-graph", class: "" }
           ],
-          
+          ad:[
+            {path: "all-details/:id", title: "All Details", icon: "pe-7s-graph", class: "" }
+          ]
 
         }
     ]

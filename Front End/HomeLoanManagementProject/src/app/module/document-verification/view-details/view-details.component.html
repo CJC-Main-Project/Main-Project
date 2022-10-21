@@ -13,7 +13,7 @@
               <th scope="col">View Details</th>
               <th scope="col">Approved</th>
               <th scope="col">Reject</th>
-              <th scope="col">Transfer</th>
+              <!-- <th scope="col">Transfer</th> -->
             </tr>
           </thead>
           <tbody>
@@ -25,7 +25,7 @@
                 <td>{{c.customerverification.status}} </td>
                 <td>
                     <!-- <a class="btn" class="btn btn-info" [routerLink]="['student-details',s.id] ">Show-Details</a> -->
-                    <button class="btn" class="btn btn-info" >Show-Details</button>
+                    <button class="btn" class="btn btn-info" (click)="allDetail(c.customerId)">Show-Details</button>
                 </td>
                 <td>
                     <button type="button" class="btn btn-success" (click)="approved(c)" >Approved</button>
@@ -33,9 +33,9 @@
                 <td>
                     <button type="button" class="btn btn-danger" (click)="reject(c)">Reject</button>
                 </td>
-                <td>
+                <!-- <td>
                     <button type="button" class="btn btn-secondary" [routerLink]="['student-update']" [state]="c">Transfer Details</button>
-                </td>
+                </td> -->
             </tr>
           </tbody>
     </table>

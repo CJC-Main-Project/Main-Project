@@ -18,6 +18,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -37,7 +38,7 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     AboutUsComponent,
     ContactUsComponent,
-    HomeComponent
+    HomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

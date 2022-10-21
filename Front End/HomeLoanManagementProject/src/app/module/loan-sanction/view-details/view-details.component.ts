@@ -52,4 +52,8 @@ sanction(id:number){
   sessionStorage.setItem('role','ls');
        this.router.navigate(['role/ls/generate-sanction-letter',id]);
 }
+allDetail(id:number){
+  sessionStorage.setItem('role','ad');
+  this.router.navigate(['role/ad/all-details',id]);
+ }
 }
