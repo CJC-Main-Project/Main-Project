@@ -92,10 +92,12 @@
             </div> 
             <div class="row">
                 <div class="form-group col-md-5">
-                    Property Proof :- &nbsp; <input type="file" class="form-control" >
+                    Property Proof :- &nbsp; 
+                    <img [src]="'data:image/jpeg;base64,'+cobj.mortgageDetails.mortgagePropertyProof" height="150"> 
                 </div>
                 <div class="form-group col-md-4">
-                    Property Insurance :- &nbsp; <input type="file" class="form-control" >
+                    Property Insurance :- &nbsp;
+                    <img [src]="'data:image/jpeg;base64,'+cobj.mortgageDetails.mortgagePropertyInsurance" height="150"> 
                 </div>
             </div>
             <!-- </div>  -->
@@ -160,7 +162,7 @@
                     Property Type :- &nbsp; <input type="text" class="form-control" value="{{cobj.propertyinfo.propertyType}}" >
                 </div>
                 <div class="form-group col-md-4">
-                    Property Document :- &nbsp; <input type="file" class="form-control" >
+                    Property Document :- &nbsp;
                     <img [src]="'data:image/jpeg;base64,'+cobj.propertyinfo.propertyDocuments" height="150"> 
                 </div>
             </div> 
@@ -313,27 +315,32 @@
             <p style="text-align: center;"><i><b>All Personal Document</b></i></p> 
             <div class="row">
                 <div class="form-group col-md-4">
-                    Photp :- &nbsp; <input type="file" class="form-control" >
-                    <!-- <img [src]="'data:image/jpeg;base64,'+cobj.allpersonaldocs.photo" height="150"> -->
+                    Photp           :- &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp;  <img [src]="'data:image/jpeg;base64,'+cobj.allpersonaldocs.photo" height="150"> 
+                   
                 </div>
                 <div class="form-group col-md-4">
-                    Signiture  :- &nbsp; <input type="file" class="form-control" >
-                </div>
-            </div> 
-            <div class="row">
-                <div class="form-group col-md-4">
-                    Adharcard :- &nbsp; <input type="file" class="form-control" >
-                </div>
-                <div class="form-group col-md-4">
-                    Pancard  :- &nbsp; <input type="file" class="form-control" >
+                    Signiture       :- &nbsp; &nbsp;&nbsp; &nbsp; 
+                    <img [src]="'data:image/jpeg;base64,'+cobj.allpersonaldocs.signature" height="150"> 
                 </div>
             </div> 
             <div class="row">
                 <div class="form-group col-md-4">
-                    Bank Cheque :- &nbsp; <input type="file" class="form-control">
+                    Adharcard       :- &nbsp; 
+                    <img [src]="'data:image/jpeg;base64,'+cobj.allpersonaldocs.addharCard" height="150"> 
                 </div>
                 <div class="form-group col-md-4">
-                    Bank Statement  :- &nbsp; <input type="file" class="form-control">
+                    Pancard         :- &nbsp; &nbsp; &nbsp;
+                    <img [src]="'data:image/jpeg;base64,'+cobj.allpersonaldocs.pancardNo" height="150"> 
+                </div>
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Bank Cheque     :- &nbsp;  &nbsp;
+                    <img [src]="'data:image/jpeg;base64,'+cobj.allpersonaldocs.bankCheque" height="150"> 
+                </div>
+                <div class="form-group col-md-4">
+                    Bank Statement  :- &nbsp; 
+                    <img [src]="'data:image/jpeg;base64,'+cobj.allpersonaldocs.bankStatement" height="150"> 
                 </div>
             </div> 
             &nbsp;<button  class="btn btn-secondary" (click)="back()" >Back</button>

@@ -1,3 +1,4 @@
+import { AllPersonalDocuments } from "./all-personal-documents";
 import { BankAccountDetails } from "./bank-account-details";
 import { CustomerAddress } from "./customer-address";
 import { CustomerVerification } from "./customer-verification";
@@ -29,5 +30,5 @@ loandisbursement:LoanDisbursement;
 sanctionletter: SanctionLetter;
 customerverification:CustomerVerification;
 dependentInfo:DependentInfo;
-
+allpersonaldocs:AllPersonalDocuments;
 }

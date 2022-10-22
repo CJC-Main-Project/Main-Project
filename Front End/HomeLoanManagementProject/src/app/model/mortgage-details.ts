@@ -3,6 +3,7 @@ export class MortgageDetails {
 mortgagePropertyValue:number;
 mortgagePropertyType:number;
 mortgageLoanOnProperty:number;
-
+mortgagePropertyProof:any[];
+mortgagePropertyInsurance:any[];
 
 }
